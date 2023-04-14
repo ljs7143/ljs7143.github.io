@@ -1,8 +1,5 @@
 const h1 = document.querySelector("div.hello:first-child h1");  //css를 통해 원하는 값을 찾는 것
 
-
-console.dir(h1);
-
 function handleTitleClick(){
     h1.style.color = "blue";
 } 
