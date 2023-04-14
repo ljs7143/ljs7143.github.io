@@ -1,45 +1,15 @@
-const h1 = document.querySelector("div.hello:first-child h1");  //css를 통해 원하는 값을 찾는 것
 
-function handleTitleClick(){
-    h1.style.color = "blue";
-} 
-function handleMouseEnter(){
+const loginInput = document.querySelector("input");
+const loginButton =  document.querySelector("button");
 
-    h1.innerText = "Mouse is here";
+
+function onLoginBtnClick(){
+    const username = loginInput.value;
+
+    if(username ===""){
+        alert("Please write your name");
+    }else if(username.length>15){
+        alert("Your name is too Long");
+    }
 }
-
-function handleMouseLeave(){
-
-    h1.innerText = "mouse is gone!";
-}
-
-function handleWindowResize(){
-    document.body.style.background = "tomato";
-}
-
-function handleWindowCopy(){
-    alert("copier!");
-}
-function handleWindowOffLine(){
-
-    alert("sos! no wifi");
-}
-
-function handleWindowOnline(){
-    alert("Connected !");
-
-}
-function handleWindowPaste(){
-    alert("Paste !!!? ");
-}
-
-
-h1.addEventListener("click", handleTitleClick);
-h1.addEventListener("mouseleave", handleMouseLeave);
-h1.addEventListener("mouseenter", handleMouseEnter);
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindowOffLine);
-window.addEventListener("online", handleWindowOnline);
-window.addEventListener("paste", handleWindowPaste);
+ loginButton.addEventListener("click",onLoginBtnClick);
