@@ -1,8 +1,13 @@
 const clock = document.querySelector("h2#clock");
 
 function getClock(){
+    //padstart를 통해 00,01처럼 표현되게 설정함
     const date = new Date();
-    clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
-getClock()   //이렇게 하면 바로 실행되어서 1초 후 시간을 표시하는 것을 막을 수 있음 
+
+getClock();
 setInterval(getClock, 1000);
