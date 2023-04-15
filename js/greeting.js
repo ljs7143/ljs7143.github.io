@@ -13,6 +13,7 @@ function onLoginSubmit(event){
     event.preventDefault(); //기본동작을 막아줌 
     loginForm.classList.add(HIDDEN_CLASSNAME);
     //localstorage에 로그인한 유저네임 정보 저장 
+    const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
 }
