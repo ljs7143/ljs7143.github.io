@@ -1,10 +1,21 @@
 
 const loginForm = document.querySelector("#login-form");
-const loginButton =  document.querySelector("#login-form input");
+const loginInput =  document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
 
 
-function onLoginSubmit(){
+//If users submit their ID, then form of login will be disappeared
+//Text will be "hello + username"
+function onLoginSubmit(event){
+    event.preventDefault(); //기본동작을 막아줌 
+    loginForm.classList.add("hidden");
     const username = loginInput.value;
-    console.log(username);
+    // greeting.innerText = "Hello " + username;
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
- loginButton.addEventListener("click",onLoginBtnClick);
+
+
+loginForm.addEventListener("submit", onLoginSubmit);
