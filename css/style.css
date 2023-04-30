@@ -83,3 +83,39 @@ form {
     background-image: url("js/background.js");
     background-size: cover; 
   }
+
+
+
+  #weather {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    text-shadow: 1px 1px 2px #000;
+    color: yellowgreen
+  }
+
+  #quote{
+
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    text-shadow: 1px 1px 2px #000;
+    color: skyblue
+
+  }
+
+  body {
+    background-image: url("js/background.js");
+    background-size: cover; 
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .center-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }

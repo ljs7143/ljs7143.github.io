@@ -10,6 +10,7 @@ const bgImage = document.createElement("img");
 //src는 경로지정
 bgImage.src = `img/${chosenImage}`;
 
-document.body.appendChild(bgImage);
+// document.body.appendChild(bgImage);
 
-
+document.body.style.backgroundImage = `url('img/${chosenImage}')`;
+document.body.style.backgroundSize = 'cover';

@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"> 
     <title>Momentum App</title>
+
+    <style>
+         h1 {
+        font-size: 48px;
+        font-weight: bold;
+        font-family: "Noto Sans KR", sans-serif;
+        text-shadow: 1px 1px 2px #000;
+        color: yellowgreen
+      }
+
+      h2 {
+        font-size: 48px;
+        font-weight: bold;
+        font-family: "Noto Sans KR", sans-serif;
+        text-shadow: 1px 1px 2px #000;
+        color: plum
+      }
+
+
+    </style>
 </head>
 <body>
-    <h2 id="clock">00:00</h2>
+    <h2 id="clock" class="center" >00:00</h2>
     <form class="hidden" id="login-form">
     
         <input 
@@ -22,7 +42,7 @@
 
     </form>
     
-    <h1 class="hidden" id="greeting" ></h1>
+    <h1 class="hidden" id="greeting"></h1>
     <form id="todo-form">
         <input type="text" placeholder="Write a To Do and Press Enter" required/>
     </form>
@@ -32,7 +52,7 @@
         <span class="shadow-effect"></span>
         <span class="shadow-effect"></span>
     </div>
-    <div id = "weather" class="blink-effect" style="font-family: Arial, sans-serif;">
+    <div id = "weather" class="center-bottom">
         <span></span>
         <span></span>
     </div>
